@@ -20,7 +20,7 @@
 
 9. 確認過再用 `git commit -am "版本說明"` 來提交改動
 
-10. 再用 `git push orign week1` 把作業推到 github
+10. 再用 `git push origin week1` 把作業推到 github
 
 11. 上 git hub 確認作業的推送狀況
 
