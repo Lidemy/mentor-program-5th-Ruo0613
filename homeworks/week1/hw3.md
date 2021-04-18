@@ -4,7 +4,7 @@
 
 **Command Line Interface** 其實就是操作電腦下命令的方法，
 
-只是跟一般在使用的圖形化介面 **Graphical User Interface **不太一樣，
+只是跟一般在使用的圖形化介面 **Graphical User Interface**不太一樣，
 
 後者對於我們來說比較直覺，就是用鼠標在圖形化的介面上操作，我們人很好去看懂並理解，
 
