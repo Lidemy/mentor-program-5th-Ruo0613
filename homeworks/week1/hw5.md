@@ -16,11 +16,11 @@
 
 1. 發送搜尋 **JavaScript** 關鍵字的 request :
 
-​       瀏覽器 &rarr; **OS** &rarr; 網卡 &rarr; Google server &rarr; DB
+   瀏覽器 &rarr; **OS** &rarr; 網卡 &rarr; Google server &rarr; DB
 
 2. 回傳 respond 並解析顯示 :
 
-      DB &rarr; Google server &rarr; 網卡 &rarr; OS &rarr; 瀏覽器
+      DB &rarr; Google server &rarr; 網卡 &rarr; OS &rarr; 瀏覽器
 
 <br />
 
