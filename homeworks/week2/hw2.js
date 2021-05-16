@@ -1,8 +1,17 @@
 function capitalize(str) {
-
-  var x = ''
-  x = str[0].toUpperCase() + str.substring(1)
-  return x
+  
+  if (str.length === 0 ) 
+  { 
+    var result = 'null'
   }
  
-console.log(capitalize('hello'));
+  else{
+  var result = ''
+  result = str[0].toUpperCase() + str.substring(1)
+  }
+  return result
+
+}
+
+ 
+console.log(capitalize(''));

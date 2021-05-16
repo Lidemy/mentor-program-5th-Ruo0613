@@ -1,24 +1,24 @@
 function join(arr, concatStr) {
-    var x = ''
+    var resultjoin = ''
     
-    for (i = 0 ; i < arr.length ; i++)
+    for (i = 0 ; i < arr.length - 1 ; i++)
     {
-        x += arr[i] + concatStr
+        resultjoin += arr[i] + concatStr
     }
-
-    return x
+        resultjoin += arr[i]
+    return resultjoin
 }
 
 function repeat(str, times) {
-    var y = ''
+    var resultrepeat = ''
 
     for (i = 1 ; i <= times ; i++)
     {
-        y += str
+        resultrepeat += str
     }
-    return y
+    return resultrepeat
   
 }
 
-console.log(join(['a'], '!'));
-console.log(repeat('a', 5));
+console.log(join(['a', 2, 3, 'b', 5], '!'));
+console.log(repeat('yoyo', 5));
