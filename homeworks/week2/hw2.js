@@ -2,7 +2,7 @@ function capitalize(str) {
   
   if (str.length === 0 ) 
   { 
-    var result = 'null'
+    return null
   }
  
   else{
@@ -14,4 +14,4 @@ function capitalize(str) {
 }
 
  
-console.log(capitalize(''));
+console.log(capitalize('hello'));
