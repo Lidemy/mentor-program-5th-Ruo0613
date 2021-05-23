@@ -10,19 +10,36 @@ rl.on('close', function() {
 solve(lines)
 })
 function solve(lines) {
-    let str = lines[0]
-    if(reverse(str) === str){
-        console.log('True')
+    let m = Number(lines[0])
+    for(let i=1;i<=m; i++){
+      let [a, b, k] = lines[i].split(' ')
+      console.log(compare(a, b, k))
     }
-    else{
-        console.log('False')
+  }
+function compare(a, b, k) {  //比大小
+    if (a === b) return "DRAW"
+    if (k == -1) {    //對調
+      let temp = a
+      a = b
+      b = temp
+    }  
+    if (a.length != b.length) {
+        if(a.length > b.length){
+            return "A"
+        }
+        else{
+            return "B"
+        }
     }
-}
-
-function reverse(str){
-    let result = ''
-    for(let i=str.length-1; i>=0; i--){
-        result += str[i]
+    for (let i=0; i<a.length; i++) {
+        if (a[i] == b[i]) {
+            continue;
+        }
+        if(a[i] > b[i]){
+            return "A"
+        }
+        else{
+            return "B"
+        }
     }
-    return result
-}
+  }
