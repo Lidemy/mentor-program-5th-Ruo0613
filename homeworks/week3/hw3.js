@@ -16,13 +16,11 @@ function solve(lines){
   }
   
   function isPrime(n) {  //判斷質數
-
     if (n < 2){
       let result = 'Composite'
      return result;
     }
   
-    
     for (let i = 2; i < n; i++) {
       if (n % i === 0) {   
         let result = 'Composite'
