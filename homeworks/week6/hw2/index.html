@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head></head>
+  <meta charset="utf-8">
+  <title>報名表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel = "stylesheet" href="./style.css">
+</head>
+<body>
+ <div class="box_1">
+      <h1 class="title">新拖延運動報名表單</h1>
+      <p class="info_1">活動日期：2020/12/10 ~ 2020/12/11</p>
+      <p class="info_2">活動地點：台北市大安區新生南路二段1號</p>
+      <p class="info_3">*必填</p>
+    <form class="form"> 
+        <div class="input_title_1 required">
+            暱稱
+        </div>
+        <div class="input">
+            <input name="nickname" type="text" placeholder="您的暱稱"/>
+        </div>
+        <div class="input_title required">
+            電子郵件
+        </div>
+        <div class="input">
+            <input name="email" type="text" placeholder="您的電子郵件"/>
+        </div>
+        <div class="input_title required">
+            手機號碼
+        </div>
+        <div class="input">
+            <input name="phone number" type="text" placeholder="您的手機號碼"/>
+        </div>
+        <div class="input_title required">
+            報名類型
+        </div>
+        <div class="input_checkbox">
+            <input name="type" type="radio" value="1" />
+            躺在床上用想像力實作
+        </div>
+        <div class="input_checkbox">
+            <input name="type" type="radio" value="2" />
+            趴在地上滑手機找現成的
+        </div>
+        <div class="input_title required">
+            怎麼知道這個活動的?
+        </div>
+        <div class="input">
+            <input name="info" type="text" placeholder="您的回答"/>
+        </div>
+        <div class="input_title">
+            其他
+        </div>
+        <p>對活動的一些建議</p>
+        <div class="input">
+            <input name="other" type="text" placeholder="您的回答"/>
+        </div>
+        <input class="bottom" type="submit"/>
+        <p>請勿透過表單送出您的密碼。</p>
+    </form>
+ </div>
+</body>

@@ -1,0 +1,105 @@
+body{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.box_1{
+    margin: auto;
+    border-top: solid 8px #fad312;
+    width: 325px;
+    height: 1085px;
+    box-shadow: 1.8px 2.4px 5px 0 var(--black-30);
+    background-color: white;
+    margin-top: 100px;
+    padding: 54px 298px 35px 39px;
+}
+.title{
+    width: 305px;
+    height: 32px;
+    margin: 0 0 35px 3px;
+    font-family: MicrosoftJhengHei;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.8px;
+    text-align: left;
+    color: #000000;
+    white-space:nowrap;
+}
+.form{
+    width: 305px;
+}
+.info_1{
+    width: 267px;
+    height: 13px;
+    margin: 11px 40px 22px 1px;
+    font-family: MicrosoftJhengHei;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+.info_2{
+        width: 267px;
+        height: 13px;
+        margin: 11px 40px 22px 1px;
+        font-family: MicrosoftJhengHei;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+}
+.info_3{
+    width: 42px;
+  height: 15px;
+  margin: 22px 264px 55px 2px;
+  font-family: MicrosoftJhengHei;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e74149;
+}
+.input_title_1{
+    font-family: MicrosoftJhengHei;
+  font-size: 20px;
+}
+.input_title{
+    margin-top: 50px;
+    font-family: MicrosoftJhengHei;
+  font-size: 20px;
+}
+.input input{
+    margin-top: 15px;
+    width: 287px;
+    height: 23px;
+    box-shadow: 1.8px 2.4px 5px 0 var(--black-30);
+    border: solid 1px #d0d0d0;
+}
+.required::after{ /*偽元素*/ 
+   content: "*";
+   color: #e74149;
+   margin-left: 2px;
+}
+.input_checkbox{
+    margin-top: 15px;
+}
+.bottom{
+    width: 92px;
+    height: 40px;
+    margin: 55px 216px 21px 0;
+    border-radius: 3px;
+    background-color: #fad312;
+    border:none
+}
