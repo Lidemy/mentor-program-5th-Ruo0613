@@ -1,0 +1,243 @@
+    .navbar{
+        box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+        padding: 0 20px;
+    }
+    .navbar .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        height: 84px;
+    }
+    .navbar_site-name{
+      font-family: Questrial;
+      font-size: 36px;
+      color: #489846;
+    }
+    .navbar_list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 18px;
+    }
+    .navbar_list li{
+        margin-left: 12px;
+        border-radius: 8px;  /*去銳化*/ 
+        transition: background 0.2s; /*漸變*/ 
+    }
+    .navbar_list li.active,
+    .navbar_list li:hover{
+        background: #ff7286;
+    }
+    .navbar_list li.active a,
+    .navbar_list li:hover a{
+        color: white;
+    }
+    .navbar_list li a{
+        display: block;
+        text-decoration: none; /*去超連結底線*/
+        color: black;
+        padding: 12px 24px;
+    }
+    .wrapper{
+        max-width: 1280px;
+        margin: 0 auto; /*置中*/
+        padding: 0 12px;
+    }
+    .banner{
+        position: relative;
+        height: 350px;
+        background: url(2.png) center/cover no-repeat;
+    }
+    .banner::after{
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .banner h1{
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        font-weight: bold;
+    }
+    h2{
+        margin: 0;
+    }
+    .section{
+        text-align: center;
+        margin-top: 75px;
+    }
+    .section_title{
+        margin-bottom: 36px;
+        display: inline-block;
+        font-size: 36px;
+        border-left: solid 15px #a3dea2;
+        padding-left: 12px;
+    }
+    .section_desc{
+        font-size: 15px;
+        line-height: 2em;
+        margin: 0 0 68px 0;
+        font-weight:bold;
+    }
+    .button{
+        padding: 60px 80px;
+        font-size: 36px;
+        color: #3e613d;
+        display: inline-block;
+        border-radius: 10px;
+        cursor: pointer;/*可點擊*/
+        transition: transform 0.1s;
+    }
+    .button:hover{
+        transform: scale(1.1);/*放大特效*/
+    }
+    .order{
+        background: #a8e8e1;
+    }
+    .query{
+        margin-left: 23px;
+        background: #f9f9b5;
+    }
+    .section_image{
+        display: flex;
+    }
+    .section_image div{
+        width: 25%;
+    }
+    .section_image img{
+        width: 100%;
+    }
+    .section_costumer{
+        display: flex;
+        margin-top: 50px;
+    }
+    .costumer{
+        width: 500px;
+        height: 200px;
+        border-radius: 5px;
+        box-shadow: -1.4px -1.4px 4px 0 var(--light-blue-grey);
+        border: solid 1px #c7e5ec;
+        background-color: var(--white);
+        position: relative;
+        }
+    .costumer+.costumer{
+        margin-left: 16px;
+    }
+    .avatar{
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .avatar img{
+        width: 100%;
+        height: 100%;
+    }
+    .costumer__author{
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .costumer__author p{
+        margin-top: 6px;
+        line-height: 18px;
+    }
+    .costumer__content{
+        position: relative;
+        top: 40%;
+    }
+    footer{
+        margin-top: 48px;
+    }
+    .footer_bottom{
+        background-color: #35564b;
+        padding: 12px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+    }
+    .footer_top{
+        background-color: #e8efee;
+        padding: 32px;
+        color: #484848;
+    }
+    .footer_top .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_info div + div{
+        margin-top: 32px;
+    }
+    .footer_site{
+        font-family: Questrial;
+        font-size: 36px;
+        color: #489846;
+    }
+    .footer_info{
+        margin-right: 16px;
+    }
+    @media(max-width:768px){
+        .navbar .wrapper{
+            height: 120px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0%;
+        }
+        .navbar_list{
+            display: flex;
+            width: 100%;
+        }
+        .navbar_list li{
+           flex: 1;    
+           margin-left: 0;
+           border-radius: 0;
+           text-align: center;
+        }
+        .navbar_site-name{
+            margin-top: 10px;
+        }
+        .query{
+            margin-left: 0;
+            margin-top: 16px;
+        }
+        .section_image{
+            flex-direction: column;
+        }
+        .section_image div{
+            width: 100%;
+        }
+        .section_costumer{
+            flex-direction: column;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+        .costumer+.costumer{
+            margin-left: 0;
+            margin-top: 70px;
+        }
+        .footer_top .wrapper{
+            flex-direction: column-reverse;
+        }
+        .footer_info{
+            margin-right: 0px;
+            margin-top: 20px;
+        }
+        .footer_bottom{
+            word-break: keep-all;
+        }    
+    }

@@ -1,0 +1,39 @@
+    .navbar{
+        height: 84px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 24px;
+    }
+    .navbar_site-name{
+      font-family: Questrial;
+      font-size: 36px;
+      color: #489846;
+    }
+    .navbar_list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 18px;
+    }
+    .navbar_list li{
+        margin-left: 24px;
+        border-radius: 8px;  /*去銳化*/ 
+        transition: background 0.2s; /*漸變*/ 
+    }
+    .navbar_list li.active,
+    .navbar_list li:hover{
+        background: #ff7286;
+    }
+    .navbar_list li.active a,
+    .navbar_list li:hover a{
+        color: white;
+    }
+    .navbar_list li a{
+        display: block;
+        text-decoration: none; /*去超連結底線*/
+        color: black;
+        padding: 12px 24px;
+    }
