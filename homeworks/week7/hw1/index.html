@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head></head>
+  <meta charset="utf-8">
+  <title>報名表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel = "stylesheet" href="./style.css">
+</head>
+<body>
+ <div class="box_1">
+      <h1 class="title">新拖延運動報名表單</h1>
+      <p class="info_1">活動日期：2020/12/10 ~ 2020/12/11</p>
+      <p class="info_2">活動地點：台北市大安區新生南路二段1號</p>
+      <p class="info_3">*必填</p>
+    <form class="form">
+        <div class="input required hide-err">
+        <div class="input_title_1">
+            暱稱
+        </div>
+        <div class="input">
+            <input name="nickname" type="text" placeholder="您的暱稱"/>
+        </div>
+        <div class="err">請輸入暱稱</div>
+        </div>
+        <div class="input required hide-err">
+        <div class="input_title">
+            電子郵件
+        </div>
+        <div class="input">
+            <input name="email" type="text" placeholder="您的電子郵件"/>
+        </div>
+        <div class="err">請輸入電子郵件</div>
+        </div>
+        <div class="input required hide-err">
+        <div class="input_title">
+            手機號碼
+        </div>
+        <div class="input">
+            <input name="phone number" type="text" placeholder="您的手機號碼"/>
+        </div>
+        <div class="err">請輸入手機號碼</div>
+        </div>
+        <div class="radio required hide-err">
+        <div class="input_title">
+            報名類型
+        </div>
+            <div class="radio">
+            <input type="radio" value="1" name="type">躺在床上用想像力實作
+            </div>
+            <div class="radio">
+            <input type="radio" value="2" name="type">趴在地上滑手機找現成的
+            </div>
+            <div class="err">請選擇報名類型</div>
+        </div>    
+        <div class="input required hide-err">
+        <div class="input_title">
+            怎麼知道這個活動的?
+        </div>
+        <div class="input">
+            <input name="info" type="text" placeholder="您的回答"/>
+        </div>
+        <div class="err">請輸入資料</div>
+        </div>
+        <div class="input_title">
+            其他
+        </div>
+        <p>對活動的一些建議</p>
+        <div class="input">
+            <input name="other" type="text" placeholder="您的回答"/>
+        </div>
+        <input class="bottom" type="submit"/>
+        <div class="remind">請勿透過表單送出您的密碼。</div>
+    </form>
+</div>
+<div class="footer">
+ <footer class="word">© 2020 © Copyright. All rights Reserved.</footer>
+</div>
+<script>
+    document.querySelector("form").addEventListener("submit", function(e){
+        e.preventDefault()
+        const inputs = document.querySelectorAll(".required input[type = text]")
+        let isErr = false
+        let values = {}
+        const elements = document.querySelectorAll(".required")
+        for(element of elements){
+            const radios = element.querySelectorAll("input[type = radio]")
+            const input = element.querySelector("input[type = text]")
+            let isvalid = true
+            if(input){
+                values[input.name] = input.value
+            if(!input.value){
+                element.classList.remove("hide-err")
+                isvalid = false
+            }
+            }else if(radios.length){
+                isvalid = [...radios].some(radio => radio.checked) //... → 打散重組成陣列
+                if(isvalid){
+                    let r = element.querySelector("input[type = radio]:checked")
+                    values[r.name] = r.value
+                }
+            }else{
+                continue
+            }
+            if(!isvalid){
+                element.classList.remove("hide-err")
+                isErr = true
+            }else{
+                element.classList.add("hide-err")
+            }
+        }
+        if (!isErr){
+            alert(JSON.stringify(values, elements))
+        }
+    })
+</script>
+</body>
